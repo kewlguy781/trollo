@@ -1,0 +1,17 @@
+<h1><%= @board.id ? "Edit #{@board.title}" : "Add New Board" %></h1>
+<hr />
+<%= form_with(model: @board, local: true) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "Board Name" %>
+    <br />
+    <br />
+    <%= f.label :desc %>
+    <%= f.text_field :desc, required: true, placeholder: "Description" %>
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+    <%= f.submit %>
+<%end%>

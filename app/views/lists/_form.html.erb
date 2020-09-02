@@ -1,0 +1,17 @@
+<h1><%= @list.id ? "Edit #{@list.title}" : "Add New List" %></h1>
+<hr />
+<%= form_with(model: @list, local: true) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "List Name" %>
+    <br />
+    <br />
+    <%= f.label :desc %>
+    <%= f.text_field :desc, required: true, placeholder: "Description" %>
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+    <%= f.submit %>
+<%end%>

@@ -1,0 +1,16 @@
+
+
+<h3>Your Board</h3>
+<ul>
+ <% @boards.each do |board| %>
+ <li>
+ <%= board.title %> - <%= board.desc %> 
+
+
+ </li>
+ <% end %>
+<br><br>
+ <%= link_to "Add a Board", new_board_path %>
+
+
+ </ul>
